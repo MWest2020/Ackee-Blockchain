@@ -50,12 +50,12 @@ fn get_operator() -> String {
 }
 
 
-fn calculate(input1: &f64, operator: &String, input2: &f64) -> f64 {
+fn calculate(input1: &f64, operator: &str, input2: &f64) -> f64 {
     let mut result = 0.0;
-    // if &input2 == 0.0 {
+    // if input2 == 0.0 && operator == "/" {
     //     println!("You can't divide by zero");
-    //     return result;
-    // }     
+    //     return 0.0;
+    // }    
     if operator == "+" {
         result = input1 + input2;
     } else if operator == "-" {
