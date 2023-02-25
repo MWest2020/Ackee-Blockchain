@@ -25,16 +25,16 @@ fn main() {
 
 
 fn get_number() ->  f64 {
-    let mut input1 = String::new();
+    let mut input = String::new();
     io::stdin()
-    .read_line(&mut input1)
+    .read_line(&mut input)
     .expect("failed to read line");  
 
     //convert to f64
-    let input1: f64 = input1.trim().parse().expect("Please type a number!");
+    let input: f64 = input.trim().parse().expect("Please type a number!");
 
-    //return input1
-    input1
+    //return input
+    input
 }
 
 fn get_operator() -> String {
@@ -45,27 +45,28 @@ fn get_operator() -> String {
 
     let operator = operator.trim().to_string();
 
-    //return input1
+    //return 
     operator
 }
 
 
 fn calculate(input1: &f64, operator: &str, input2: &f64) -> f64 {
-    let mut result = 0.0;
-    // if input2 == 0.0 && operator == "/" {
-    //     println!("You can't divide by zero");
-    //     return 0.0;
-    // }    
+    let mut result = input1.clone();
     if operator == "+" {
-        result = input1 + input2;
+        result += input2;
     } else if operator == "-" {
-        result = input1 - input2;
+        result -= input2;
     } else if operator == "*" {
-        result = input1 * input2;
+        result *= input2;
     } else if operator == "/" {
-        result = input1 / input2;
+        if *input2 == 0.0 {
+            println!("You can't divide by zero");
+            return 0.0;
+        }
+        result /= input2;
     } else {
         println!("Please provide a valid operator");
+        return 0.0;
     }
     result
 }
