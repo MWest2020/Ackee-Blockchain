@@ -11,3 +11,27 @@ The [code](https://github.com/MWest2020/Ackee-Blockchain/tree/main/calculator) s
 Lazy is my middle name, so I turned to chatGPT and asked if it could rewrite the program to a CLI application. Lo and behold, it spews out the code within seconds. It also gave me a good spanking on writing more concise code for the calculate function. Having [this code](https://github.com/MWest2020/Ackee-Blockchain/tree/main/calc-cli) on a Linux machine will enable the simple calculator in a terminal window by using the command `calc {n} {operator}.
 
 It made me wonder if ChatGPT can assist me in an attempt to rock some Rust frontend framework for the simple calculator, so thatś what I am going to do next.
+
+---
+
+todo: insert screen chatGPT
+
+---
+
+## Building a front for the calculator
+
+### Step 1
+
+All right, the first step didn´t work. so head over to the official [Yew.rs](https://yew.rs/docs/getting-started/introduction) page and follow the instructions
+
+Don´t forget to follow the `cargo-generate` instalaltion on page 2
+
+### Step 2
+
+start a new Yew project with the `template`or manually.. Of course, do some fancy misspelling like most "creative" IT crowdlords. I chose "Calculatoor" for my app.
+
+```bash
+trunk serve
+```
+
+Will run the app on `localhost:8080`.
